@@ -1,5 +1,7 @@
 
 <!DOCTYPE html>
+<html lang="en">
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -9,6 +11,7 @@
 <body>
 
 <script src="/three.min.js"></script>
+<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
 
 <script>
 var camera, scene, renderer;
@@ -33,6 +36,9 @@ function init() {
 	renderer = new THREE.WebGLRenderer( { antialias: true } );
 	renderer.setSize( window.innerWidth, window.innerHeight );
 	document.body.appendChild( renderer.domElement );
+	
+	var controls = new THREE.OrbitControls(camera, renderer.domElement);
+
 
 }
 
