@@ -1,0 +1,22 @@
+body {
+  background-color: #bfe3dd;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+#buttons {
+position:absolute;  
+z-index:2;  
+left:250px;  
+top:250px;  
+
+font-family: verdana;
+font-size: 20px;
+}
