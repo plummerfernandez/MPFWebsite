@@ -83,7 +83,7 @@ function init() {
 
   var loader = new THREE.GLTFLoader();
 
-    loader.load( '/rock1.gltf', function ( gltf ) {
+    loader.load( '/rock2.gltf', function ( gltf ) {
 
       rock = gltf.scene;
       scene.add( rock );
@@ -135,8 +135,8 @@ function animate() {
   requestAnimationFrame( animate );
   mesh.rotation.x += 0.0005;
   mesh.rotation.y += 0.005;
-  rock.rotation.x += 0.002;
-  rock.rotation.y += 0.003;
+  //rock.rotation.x += 0.002;
+  //rock.rotation.y += 0.003;
   renderer.render( scene, camera );
 
 }
