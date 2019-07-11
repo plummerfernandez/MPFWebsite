@@ -137,12 +137,18 @@ a:active {
 
 #grid {  
  z-index:3;
-   /*margin-top: 50px;*/
+   /*
    padding-bottom: 30px;
   margin-left: 300px;
   margin-right: 300px;
-  /*margin-bottom: 50px;*/
-  /*border-top: 1px solid #000;*/
+  */
+ width: 900px;
+ position: relative;
+  margin:0 auto;
+}
+/* If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */    
+@media only screen and (max-width: 479px){
+    #grid { width: 90%; }
 }
 
 
