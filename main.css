@@ -1,22 +1,156 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
 body {
-  background-color: #bfe3dd;
+  /*background-color: #ffd47d;*/
+  background-color:#d4baba;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.1;
+  font-smooth: auto;
+  
+  margin: 0 !important;
+  padding: 0 !important;
+
 }
 
 h1 {
-  color: white;
-  text-align: center;
+    font-weight: 200;
+	font-family: "Noto Serif", Serif;
+	font-size: 15px;
+	text-align: top;
+	vertical-align: top;
+}
+
+h2{
+ font-family: "Averia Serif Libre", Serif;
+ font-weight: lighter;
+ font-size: 30px;
+ padding:none;
 }
 
 p {
-  font-family: verdana;
-  font-size: 20px;
+    font-size: 1.5rem;
+    font-weight: 400;
+	color: rgba(0, 0, 0, 0.9);
+	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	line-height: 1.1;
+	font-smooth: auto;
+	font-size: 15px;
 }
-#buttons {
-position:absolute;  
-z-index:2;  
-left:250px;  
-top:250px;  
 
-font-family: verdana;
-font-size: 20px;
+ul {
+    padding:0;
+    list-style: none;
 }
+
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+    text-decoration: none;
+}
+.social-icons a:link{
+	text-decoration: none;
+	 border-bottom: none;
+}
+
+
+a:link {
+  color: rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: rgba(0, 0, 0, 0.9);
+  border-bottom: 2px solid #000;
+  padding-bottom: 3px;
+}
+
+/* selected link */
+a:active {
+  color: grey;
+}
+
+#three {
+  position: fixed;
+  z-index:-1;  
+  margin-top: 0px;
+  margin-left: -10px;
+  
+
+}
+
+#topmenu {
+	width:100%;
+	position:fixed;
+	z-index: 1;
+	padding: none;
+	vertical-align: top;
+	text-align: left;
+	margin-top: 15px;
+	font-weight: 400;
+	font-family: "Noto Serif", Serif;
+	font-size: 18px;
+	padding-right:50px;
+	margin-left:10px; 
+	margin-right:auto;
+	
+	
+	
+
+}
+
+#topmenu a:link,
+#topmenu a:visited
+{
+   text-decoration: none;
+   border-bottom: none;
+   font-style: italic;
+}
+#topmenu a:hover {
+   text-decoration: none;
+   font-style: italic;
+   border-bottom: 1px solid #000;
+   padding-bottom: 3px;
+
+}
+
+
+#buttons {
+  position:fixed;  
+  z-index:2;  
+  margin-top: 80px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 10px;
+  visibility: hidden;
+}
+
+#grid {  
+ z-index:3;
+   /*margin-top: 50px;*/
+   padding-bottom: 30px;
+  margin-left: 300px;
+  margin-right: 300px;
+  /*margin-bottom: 50px;*/
+  /*border-top: 1px solid #000;*/
+}
+
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
