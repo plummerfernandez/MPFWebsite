@@ -100,7 +100,7 @@ a:active {
 	font-weight: 400;
 	font-family: "Noto Serif", Serif;
 	color : white;
-	font-size: 18px;
+	font-size: 1rem;
 
 	width: 100%;
      margin:0 auto;
@@ -151,7 +151,7 @@ a:active {
 }
 /* If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */    
 @media only screen and (max-width: 479px){
-    #grid { width: 85%; }
+    #grid { width: 90%; }
 }
 
 
