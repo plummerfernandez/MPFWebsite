@@ -132,7 +132,7 @@ a:active {
   z-index:1;
   -webkit-column-gap: 1.8rem; /* Chrome, Safari, Opera */
   -moz-column-gap: 1.8rem; /* Firefox */
-  column-gap: 1.8rem;
+  column-gap: 2.4rem;
   width: 55%;
   position: relative;
   margin:0 auto;
