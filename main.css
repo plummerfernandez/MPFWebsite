@@ -89,7 +89,7 @@ a:active {
   opacity: 0.5;
 }
 
-#topmenu {
+.navbar {
 	/*background-color: #d4baba;*/
 	background-color: white;
 	position:fixed;
@@ -97,30 +97,24 @@ a:active {
 	padding-top: 0.6rem;
 	padding-bottom: 0.6rem;
 	text-align: center;
-
 	font-weight: 400;
 	font-family: "Noto Serif", Serif;
+	font-style: italic;
 	color : black;
 	font-size: 0.9rem;
-
 	width: 100%;
     margin:0 auto;
 }
 
-#topmenu a:link,
-#topmenu a:visited
+.navbar a:link,
+.navbar a:visited
 {
    text-decoration: none;
    border-bottom: none;
-   font-style: italic;
-   color : black;
 }
-#topmenu a:hover {
+.navbar a:hover {
    text-decoration: none;
-   font-style: italic;
-   color : black;
-   border-bottom: 1px solid #fff;
-   padding-bottom: 3px;
+   border-bottom: 1px solid #000;
 }
 
 
@@ -136,9 +130,9 @@ a:active {
 
 #grid {  
   z-index:1;
-  -webkit-column-gap: 1.5rem; /* Chrome, Safari, Opera */
-  -moz-column-gap: 1.5rem; /* Firefox */
-  column-gap: 1.5rem;
+  -webkit-column-gap: 1.8rem; /* Chrome, Safari, Opera */
+  -moz-column-gap: 1.8rem; /* Firefox */
+  column-gap: 1.8rem;
   width: 55%;
   position: relative;
   margin:0 auto;
