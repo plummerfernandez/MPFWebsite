@@ -155,8 +155,8 @@ a:active {
   font-size: 1.2rem;
   text-align: left;
   background-color: #eee;
-  padding-left: 3.2rem;
-  line-height: 1.4rem;
+  padding-left: 3rem;
+  line-height: 1.2rem;
   position:fixed;  
   z-index:4;  
   width: 15%;
