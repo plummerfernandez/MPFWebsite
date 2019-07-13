@@ -158,13 +158,15 @@ a:active {
 .topnav {
   font-family: 'Averia Serif Libre', sans-serif;
   font-size: 1.2rem;
-  text-align: right;
+  text-align: left;
+  background-color: #eee;
+  padding-left: 3rem;
   line-height: 1.1rem;
   position:fixed;  
   z-index:4;  
-  overflow: hidden;
-  width: 50%;
-  top: 0;
+/*  overflow: hidden;
+*/  width: 50%;
+
   left:0;
 
 }
