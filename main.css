@@ -164,7 +164,6 @@ a:active {
   line-height: 1.1rem;
   position:fixed;  
   z-index:4;  
-  overflow: hidden;
   width: 50%;
   left:0;
 
