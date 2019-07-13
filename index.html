@@ -14,12 +14,38 @@
 <body>
  
 
-<div class="navbar">
+<!-- <div class="topnav">
     <a href="/index.html" >About</a> /
     <a href="/current.html" >Current works</a> /
     <a href="/portfolio.html" >Past works</a> /
     <a href="/writing.html" >Writing</a>
 </div>
+ -->
+
+<!-- Top Navigation Menu -->
+<div class="topnav">
+  <!-- <a href="#home" class="active"></a> -->
+  <div id="myLinks">
+    <a href="/index.html">About</a>
+    <a href="/current.html">Current works</a>
+    <a href="/portfolio.htm">Past works</a>
+    <a href="/writing.html" >Writing</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
 
 <!-- 
 <div id="buttons">

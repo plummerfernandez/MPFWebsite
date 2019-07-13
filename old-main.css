@@ -1,5 +1,4 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
-/*https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css*/
 
 body {
   /*background-color: #ffd47d;*/
@@ -13,9 +12,6 @@ body {
   padding: 0 !important;
 
 }
-
-
-
 
 h1 {
     font-weight: 200;
@@ -153,51 +149,5 @@ a:active {
 
 .column {
   flex: 50%;
-}
-
-.topnav {
-  font-family: 'Averia Serif Libre', sans-serif;
-  font-size: 1.2rem;
-  text-align: right;
-  line-height: 1.1rem;
-  position:fixed;  
-  z-index:4;  
-  overflow: hidden;
-  width: 18%;
-  top: 0;
-  left:0;
-
-}
-
-.topnav #myLinks {
-  display: none;
-}
-
-.topnav a {
-  background-color: #eee;
-  color: black;
-  padding: 1rem 1rem;
-  text-decoration: none;
-  display: block;
-  border-bottom: 0px;
-
-}
-.topnav a:hover {
-  color: grey;
-  background-color: #eee;
-}
-
-.topnav a.icon {
-  color: black;
-  background-color: #eee;
-  text-decoration: none;
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
-  border-bottom-right-radius: 1rem;
-}
-
-.active {
 }
 
