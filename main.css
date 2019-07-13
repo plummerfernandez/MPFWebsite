@@ -141,11 +141,6 @@ a:active {
   position: relative;
   margin:0 auto;
 }
-/* If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */    
-@media only screen and (max-width: 479px){
-    #grid { width: 90%; }
-}
-
 
 .row {
   display: flex;
@@ -160,13 +155,12 @@ a:active {
   font-size: 1.2rem;
   text-align: left;
   background-color: #eee;
-  padding-left: 3rem;
+  padding-left: 3.5rem;
   line-height: 1.1rem;
   position:fixed;  
   z-index:4;  
-  width: 50%;
+  width: 15%;
   left:0;
-
 }
 
 .topnav #myLinks {
@@ -198,6 +192,9 @@ a:active {
   border-bottom-right-radius: 1rem;
 }
 
-.active {
-}
+/* If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */    
+@media only screen and (max-width: 479px){
+    #grid { width: 90%; }
+    .topnav {width: 50%;}
 
+}
