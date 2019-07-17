@@ -3,7 +3,8 @@
 
 body {
   /*background-color: #ffd47d;*/
-  background-color:#d4baba;
+  /*background-color:#d4baba;*/
+  background-color:white;
   text-align: left;
   font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
@@ -134,8 +135,8 @@ a:active {
 
 #grid {  
   z-index:1;
-  -webkit-column-gap: 1.8rem; /* Chrome, Safari, Opera */
-  -moz-column-gap: 1.8rem; /* Firefox */
+  -webkit-column-gap: 2.4rem; /* Chrome, Safari, Opera */
+  -moz-column-gap: 2.4rem; /* Firefox */
   column-gap: 2.4rem;
   width: 55%;
   position: relative;

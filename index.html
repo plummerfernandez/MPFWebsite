@@ -59,9 +59,9 @@ function myFunction() {
 
   <div id="three">
 
-  <script src="/three.min.js"></script>
-  <script src="/OrbitControls.js"></script>
-  <script src="GLTFLoader.js"></script>
+  <script src="/threejs/three.min.js"></script>
+  <script src="/threejs/OrbitControls.js"></script>
+  <script src="/threejs/GLTFLoader.js"></script>
 
 
 
@@ -105,7 +105,7 @@ function init() {
   mesh.rotation.y = 0.5;
 // add rock2.gltf file
   var loader = new THREE.GLTFLoader();
-  loader.load( '/rock.gltf', function ( gltf ) {
+  loader.load( '/threejs/rock.gltf', function ( gltf ) {
 
       rock = gltf.scene;
       scene.add( rock );
