@@ -211,6 +211,6 @@ a:active {
 @media only screen and (max-width: 479px){
     #grid { width: 90%; }
     .topnav {width: 50%;}
-    .portfoliogrid {grid-template-columns: auto;}
+    .portfoliogrid {grid-template-columns: auto; width: 90%;}
 
 }
