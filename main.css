@@ -230,7 +230,7 @@ a:active {
 
 /* If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */    
 @media only screen and (max-width: 479px){
-    #grid { width: 90%; }
+    #grid { width: 90%; grid-gap: 3rem;}
     .topnav {width: 50%;}
     .portfoliogrid {grid-template-columns: auto; width: 90%;}
 
