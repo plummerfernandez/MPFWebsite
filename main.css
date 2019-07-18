@@ -9,17 +9,12 @@ body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.5;
   font-smooth: auto;
-  
   margin: 0 !important;
   padding: 0 !important;
-
 }
 
-
-
-
 h1 {
-    font-weight: 200;
+  font-weight: 200;
 	font-family: "Noto Serif", Serif;
 	font-size: 1.4rem;
 	text-align: top;
@@ -27,16 +22,16 @@ h1 {
 }
 
 h2{
- font-family: "Averia Serif Libre", Serif;
- font-weight: lighter;
- font-size: 1.6rem;
- line-height: 1.3;
- padding:none;
+  font-family: "Averia Serif Libre", Serif;
+  font-weight: lighter;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  padding:none;
 }
 
 p {
-    font-size: 1rem;
-    font-weight: 400;
+  font-size: 1rem;
+  font-weight: 400;
 	color: rgba(0, 0, 0, 0.9);
 	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
@@ -89,8 +84,6 @@ a:active {
 #three {
   position: fixed;
   z-index:-1;  
-/*  margin-top: 0px;
-  margin-left: -10px;*/
   opacity: 0.5;
 }
 
@@ -108,7 +101,7 @@ a:active {
 	color : black;
 	font-size: 0.9rem;
 	width: 100%;
-    margin:0 auto;
+  margin:0 auto;
 }
 
 .navbar a:link,
@@ -133,11 +126,30 @@ a:active {
   visibility: hidden;
 }
 
+.portfoliogrid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1.5rem;
+  background-color: #2196F3;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 55%;
+  position: relative;
+  margin:0 auto;
+}
+
+.portfoliogrid > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+
 #grid {  
   z-index:1;
   -webkit-column-gap: 2.4rem; /* Chrome, Safari, Opera */
   -moz-column-gap: 2.4rem; /* Firefox */
   column-gap: 2.4rem;
+  grid-gap: 2.4rem;
   width: 55%;
   position: relative;
   margin:0 auto;
@@ -150,6 +162,8 @@ a:active {
 .column {
   flex: 50%;
 }
+
+
 
 .topnav {
   font-family: 'Averia Serif Libre', sans-serif;
@@ -197,5 +211,6 @@ a:active {
 @media only screen and (max-width: 479px){
     #grid { width: 90%; }
     .topnav {width: 50%;}
+    .portfoliogrid {grid-template-columns: auto;}
 
 }
