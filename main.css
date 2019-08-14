@@ -23,8 +23,8 @@ body {
   height: 100%;
   text-align: center;
   bottom: 0;
-  background: #ffd47d;
-}
+/*  background: #ffd47d;
+*/}
 
 
 h2{
@@ -105,8 +105,7 @@ a:active {
   opacity: 1;
 }
 
-.navbar {
-	/*background-color: #d4baba;*/
+/*.navbar {
 	background-color: white;
 	position:fixed;
 	z-index: 3;
@@ -132,7 +131,7 @@ a:active {
    text-decoration: none;
    border-bottom: 1px solid #000;
 }
-
+*/
 
 #buttons {
   position:fixed;  
@@ -217,7 +216,7 @@ a:active {
   font-family: 'Averia Serif Libre', sans-serif;
   font-size: 1.2rem;
   text-align: left;
-  background-color: #ffd47d;
+  background-color: white;
   padding-left: 3rem;
   line-height: 1.2rem;
   position:fixed;  
@@ -231,7 +230,7 @@ a:active {
 }
 
 .topnav a {
-  background-color: #ffd47d;
+  background-color: white;
   color: black;
   padding: 0.8rem 1rem;
   text-decoration: none;
@@ -241,12 +240,12 @@ a:active {
 }
 .topnav a:hover {
   color: grey;
-  background-color: #ffd47d;
+  background-color: white;
 }
 
 .topnav a.icon {
   color: black;
-  background-color: #ffd47d;
+  background-color: white;
   text-decoration: none;
   display: block;
   position: fixed;
