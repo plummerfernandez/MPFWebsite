@@ -101,7 +101,7 @@ a:active {
 
 #three {
   position: fixed;
-  z-index:5;  
+  z-index:1;  
   opacity: 1;
 }
 
@@ -188,6 +188,9 @@ a:active {
   text-decoration: none;
 }
 
+.transparency{
+  background: rgba(255, 255, 255, 0.5); 
+}
 
 #grid {  
   z-index:1;
@@ -198,6 +201,7 @@ a:active {
   width: 55%;
   position: relative;
   margin:0 auto;
+  
 }
 
 .row {

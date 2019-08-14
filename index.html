@@ -58,12 +58,12 @@ function menuFunction() {
 
   <script>
     //threejs script
-    var camera, scene, renderer;
+    var camera, scene, renderer, controls;
     var geometry, material, mesh, rock, dirLight, hemiLight;
     init();
     animate();
     //// activate this for controlling camera
-    //var controls = new THREE.OrbitControls(camera, renderer.domElement);
+
     
     
     // testButton1.onclick = function () {
@@ -84,6 +84,8 @@ function init() {
   camera.position.z = 1;
 
   scene = new THREE.Scene();
+
+  
   //scene.background = new THREE.Color( 0xffd47d );
 
   //geometry = new THREE.BoxGeometry( 0.4, 0.4, 0.4 );
@@ -133,16 +135,21 @@ function init() {
   
   renderer.render(scene, camera);
 
-
+  controls = new THREE.OrbitControls(camera, renderer.domElement);
+  
+  
+  
 }
 
 function animate() {
   requestAnimationFrame( animate );
+  
   //mesh.rotation.x += 0.0005;
   //mesh.rotation.y += 0.005;
   if(rock){
   rock.rotation.x += 0.002;
   rock.rotation.y += 0.003;
+  controls.update();
   renderer.render( scene, camera );
   }
 }
@@ -162,20 +169,19 @@ function animate() {
 
 <script>
 function clearMesh() {
-  //<div onscroll="clearMesh()">
   document.getElementById("three").style.zIndex = "-1";
-  document.getElementById("three").style.opacity = "0.6";
+  // document.getElementById("three").style.opacity = "0.4";
   console.log("clearMesh called");
 }
 
 </script>
 
-<div class="full-height">▼</div>
-
+<div class="full-height"><h2><i>M PF</i></h2><br>▼</div>
+<div class="transparency">
 <div id="grid">
   <div id ="about">
   <br><br><br>
-<h2>M Plummer-Fernandez is an artist and creative ecologist, engaged in work that configures and connects computational, social and ecological processes, towards a multiplicity of outcomes spanning sculpture, installations, software, design and research. His work regularly advocates for copyleft developments to technology and culture, and increasingly focuses on activism and ecology.<br><br></h2><br>
+<h2>M Plummer-Fernandez is an artist and creative ecologist, engaged in work that configures and connects computational, social and ecological processes, towards multiple outcomes spanning sculpture, installations, software, design and research. His work regularly explores copyleft approaches to culture and technology, and increasingly focuses on activism and ecology.<br><br></h2><br>
 </div>
 </div>
 
@@ -549,7 +555,7 @@ Environmentally-Oriented Internet Content to Engage Energy Groups</i>. (Gaver et
 </div>
 
 </div> 
-
+</div>
 
 </body>
 
