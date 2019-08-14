@@ -20,7 +20,7 @@ body {
 .full-height {
   z-index:-2;
   position: relative;
-  height: 100%;
+  height: 80%;
   text-align: center;
   bottom: 0;
 /*  background: #ffd47d;
@@ -33,6 +33,14 @@ h2{
   font-size: 1.6rem;
   line-height: 1.3;
   padding:none;
+}
+ h4{
+  font-family: "Averia Serif Libre", Serif;
+  font-weight: lighter;
+  font-size: 1.6rem;
+  line-height: 1.3;
+  padding:none;
+  text-align: center;
 }
 
 h3{
