@@ -9,7 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Montserrat&display=swap" rel="stylesheet"> 
     <link type="text/css" rel="stylesheet" href="main.css">
   </head>
-<body>
+
+<body onscroll="clearMesh()">
+
  
 
 <!-- Top Navigation Menu -->
@@ -23,13 +25,13 @@
     <a href="/index.html#news" >News</a>
     <a href="/index.html#contact" >Contact</a><br>
   </div>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+  <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
     <i class="fa fa-bars"></i>
   </a>
 </div>
 
 <script>
-function myFunction() {
+function menuFunction() {
   var x = document.getElementById("myLinks");
   if (x.style.display === "block") {
     x.style.display = "none";
@@ -47,7 +49,7 @@ function myFunction() {
 </div> -->
 
 
-  <div id="three">
+  <div id="three" >
 
   <script src="/threejs/three.min.js"></script>
   <script src="/threejs/OrbitControls.js"></script>
@@ -84,14 +86,14 @@ function init() {
   scene = new THREE.Scene();
   //scene.background = new THREE.Color( 0xffd47d );
 
-  geometry = new THREE.BoxGeometry( 0.4, 0.4, 0.4 );
-  //material = new THREE.MeshNormalMaterial(  );
-  material = new THREE.MeshLambertMaterial({color: 0xffffff});
+  //geometry = new THREE.BoxGeometry( 0.4, 0.4, 0.4 );
+  //--material = new THREE.MeshNormalMaterial(  );
+  //material = new THREE.MeshLambertMaterial({color: 0xffffff});
 
-  mesh = new THREE.Mesh( geometry, material );
-  scene.add( mesh );
-  mesh.rotation.x = 0.5;
-  mesh.rotation.y = 0.5;
+  //mesh = new THREE.Mesh( geometry, material );
+  //scene.add( mesh );
+  //mesh.rotation.x = 0.5;
+  //mesh.rotation.y = 0.5;
 // add rock2.gltf file
   var loader = new THREE.GLTFLoader();
   loader.load( '/threejs/rock.gltf', function ( gltf ) {
@@ -117,7 +119,6 @@ function init() {
           dirLight.position.set( -5, 1.75, 4 );
           dirLight.position.multiplyScalar( 30 );
           scene.add( dirLight );
-  
           dirLight.castShadow = true;
   
 
@@ -139,9 +140,11 @@ function animate() {
   requestAnimationFrame( animate );
   //mesh.rotation.x += 0.0005;
   //mesh.rotation.y += 0.005;
+  if(rock){
   rock.rotation.x += 0.002;
   rock.rotation.y += 0.003;
   renderer.render( scene, camera );
+  }
 }
 
 // -- my function for changing viewpoint on button press
@@ -157,12 +160,20 @@ function animate() {
 
 </div>
 
+<script>
+function clearMesh() {
+  //<div onscroll="clearMesh()">
+  document.getElementById("three").style.zIndex = "-1";
+  document.getElementById("three").style.opacity = "0.6";
+  console.log("clearMesh called");
+}
 
+</script>
 
 <div id="grid">
   <div id ="about">
   <br><br><br>
-<h2>M Plummer-Fernandez is a Colombian-British artist with a background in design and engineering. His works configure and entangle computational, social and environmental processes, towards a multiplicity of outcomes ranging from sculpture to installations, to software tools and research.<br><br>M PF is also a researcher of new art practices and software automation, having recently completed a PhD at Goldsmiths, London, and having curated group shows of emerging art communities. He runs the blog <i><a href="http://algopop.tumblr.com/" target="_blank">algopop</a></i> on everyday algorithmic encounters.</h2><br>
+<h2>M Plummer-Fernandez is an artist and creative ecologist, engaged in work that configures and connects computational, social and ecological processes, towards a multiplicity of outcomes spanning sculpture, installations, software, design and research. His work regularly advocates for copyleft developments to technology and culture, and increasingly focuses on activism and ecology.<br><br></h2><br>
 </div>
 </div>
 
@@ -196,7 +207,8 @@ function animate() {
 
  <div id="grid" class="row">
   <div class="column">
-<p>    
+<p>
+<a href ="/M_Plummer-Fernandez__CV2019.pdf"> Download CV </a><br><br>    
 Born 22 Aug 1982<br>
 Lived in Colombia 89-99<br>
 Currently based in UK</a>
@@ -532,7 +544,7 @@ Environmentally-Oriented Internet Content to Engage Energy Groups</i>. (Gaver et
 
 </p>
 
-  </div>
+</div>
 
 </div> 
 
