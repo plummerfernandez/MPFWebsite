@@ -246,6 +246,8 @@ a:active {
   z-index:4;  
   width: 15%;
   left:0;
+  top: 0;
+  padding-top: 0;
 }
 .topnav #myLinks {
   display: none;
