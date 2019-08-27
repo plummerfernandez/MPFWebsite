@@ -155,7 +155,7 @@ a:active {
 
 .cvgrid{
    display: grid; 
-   grid-template-columns: repeat(2, minmax(280px,1fr));
+   grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
    grid-gap: 3rem; 
    width: 55%;
    position: relative;
@@ -278,5 +278,6 @@ a:active {
     #grid { width: 85%; grid-gap: 3rem;}
     .topnav {width: 100%;}
     .portfoliogrid {grid-template-columns: auto; width: 90%;}
+    .cvgrid {grid-template-columns: auto; width: 90%;}
 
 }
