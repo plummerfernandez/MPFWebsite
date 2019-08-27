@@ -34,6 +34,7 @@ h2{
   line-height: 1.3;
   padding:none;
 }
+
  h4{
   font-family: "Averia Serif Libre", Serif;
   font-weight: lighter;
@@ -42,6 +43,7 @@ h2{
   padding:none;
   text-align: center;
 }
+
 
 h3{
   font-family: "Averia Serif Libre", Serif;
@@ -151,11 +153,21 @@ a:active {
   visibility: hidden;
 }
 
+.cvgrid{
+   display: grid; 
+   grid-template-columns: repeat(2, minmax(280px,1fr));
+   grid-gap: 3rem; 
+   width: 55%;
+   position: relative;
+   margin:0 auto;
+}
+
 .portfoliogrid {
   display: grid;
 /*  grid-template-columns: auto auto auto;
     grid-template-columns: 1fr 1fr 1fr;
-*/  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+*/  
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
   grid-gap: 4rem;
   background-color: white;
   padding-bottom: 3rem;
@@ -187,18 +199,17 @@ a:active {
 }
 /* mouse over link */
 .portfoliogrid a:hover {
-/*  color: lightgrey;
- text-decoration: underline;*/ 
   opacity: 0.8;
 }
 /* selected link */
 .portfoliogrid a:active {
   text-decoration: none;
 }
-
 .transparency{
   background: rgba(255, 255, 255, 0.5); 
 }
+
+
 
 #grid {  
   z-index:1;
@@ -209,7 +220,6 @@ a:active {
   width: 55%;
   position: relative;
   margin:0 auto;
-  
 }
 
 .row {
@@ -220,9 +230,10 @@ a:active {
   flex: 50%;
 }
 
-
-
-
+#arrow {
+  text-decoration: none;
+  border-bottom: none;
+}
 
 .topnav {
   font-family: 'Averia Serif Libre', sans-serif;
@@ -236,11 +247,9 @@ a:active {
   width: 15%;
   left:0;
 }
-
 .topnav #myLinks {
   display: none;
 }
-
 .topnav a {
   background-color: white;
   color: black;
@@ -248,13 +257,11 @@ a:active {
   text-decoration: none;
   display: block;
   border-bottom: 0px;
-
 }
 .topnav a:hover {
   color: grey;
   background-color: white;
 }
-
 .topnav a.icon {
   color: black;
   background-color: white;
