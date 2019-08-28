@@ -27,6 +27,13 @@ body {
 /*  background: #ffd47d;
 */}
 
+.logo {
+  z-index:-2;
+  position: relative;
+  text-align: center;
+  bottom: 0;
+/*  background: #ffd47d;
+*/}
 
 h2{
   font-family: "Averia Serif Libre", Serif;
@@ -116,33 +123,6 @@ a:active {
   opacity: 1;
 }
 
-/*.navbar {
-	background-color: white;
-	position:fixed;
-	z-index: 3;
-	padding-top: 0.6rem;
-	padding-bottom: 0.6rem;
-	text-align: center;
-	font-weight: 400;
-	font-family: "Noto Serif", Serif;
-	font-style: italic;
-	color : black;
-	font-size: 0.9rem;
-	width: 100%;
-  margin:0 auto;
-}
-
-.navbar a:link,
-.navbar a:visited
-{
-   text-decoration: none;
-   border-bottom: none;
-}
-.navbar a:hover {
-   text-decoration: none;
-   border-bottom: 1px solid #000;
-}
-*/
 
 #buttons {
   position:fixed;  
@@ -171,7 +151,7 @@ a:active {
   grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
   grid-gap: 4rem;
   background-color: white;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   padding-top: 1rem;
   width: 75%;
   position: relative;
@@ -214,22 +194,13 @@ a:active {
 
 #grid {  
   z-index:1;
-  -webkit-column-gap: 2.4rem; /* Chrome, Safari, Opera */
-  -moz-column-gap: 2.4rem; /* Firefox */
-  column-gap: 2.4rem;
-  grid-gap: 2.4rem;
   width: 55%;
   position: relative;
   margin:0 auto;
+  bottom: 0;
 }
 
-.row {
-  display: flex;
-}
 
-.column {
-  flex: 50%;
-}
 
 #arrow {
   text-decoration: none;
