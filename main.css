@@ -195,7 +195,7 @@ a:active {
   display: grid;
 /*  grid-template-columns: 1fr 1fr 1fr;
 */  
-  grid-template-columns: repeat(1fr 1fr 1fr, minmax(280px,1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3rem;
   background-color: white;
   padding-bottom: 1rem;
@@ -275,11 +275,11 @@ a:active {
 }
 
 /* If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */    
-@media only screen and (max-width: 479px){
+@media only screen and (max-width: 749px){
     #grid { width: 87%; grid-gap: 3rem;}
     .topnav {width: 100%;}
     .portfoliogrid {grid-template-columns: auto; width: 90%;}
-    .workgrid {grid-template-columns: auto; width: 90%;}
+    .workgrid {grid-template-columns: 1fr; width: 90%;}
     .cvgrid {grid-template-columns: auto; width: 87%;}
 
 }
