@@ -288,6 +288,6 @@ a:active {
     .topnav {width: 100%;}
     .portfoliogrid {grid-template-columns: auto; width: 90%;}
     .workgrid {grid-template-columns: auto; width: 90%;}
-    .cvgrid {grid-template-columns: 1fr; width: 87%;}
+    .cvgrid {grid-template-columns: auto; width: 87%;}
 
 }
