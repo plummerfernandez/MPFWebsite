@@ -195,10 +195,13 @@ a:active {
   display: grid;
 /*  grid-template-columns: 1fr 1fr 1fr;
 */  
+  grid-gap: 2rem;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 3rem;
-  background-color: white;
-  padding-bottom: 1rem;
+  
+/*  background-color: pink;
+  border: 2px solid black;*/
+
+  padding-bottom: 3rem;
   padding-top: none;
   width: 55%;
   position: relative;
@@ -214,7 +217,12 @@ a:active {
 .fullwidthitem {
   grid-column: 1 / span 3;
 }
-
+.twothirdsitem {
+  grid-column: 1 / span 2;
+}
+.doubleheightitem {
+  grid-column: 2 / span 1;
+}
 
 #grid {  
   z-index:1;
@@ -280,6 +288,6 @@ a:active {
     .topnav {width: 100%;}
     .portfoliogrid {grid-template-columns: auto; width: 90%;}
     .workgrid {grid-template-columns: auto; width: 90%;}
-    .cvgrid {grid-template-columns: auto; width: 87%;}
+    .cvgrid {grid-template-columns: 1fr; width: 87%;}
 
 }
