@@ -193,9 +193,10 @@ a:active {
 
 .workgrid{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-/*  grid-template-columns: repeat(1fr 1fr, minmax(280px,1fr));
-*/  grid-gap: 3rem;
+/*  grid-template-columns: 1fr 1fr 1fr;
+*/  
+  grid-template-columns: repeat(1fr 1fr 1fr, minmax(280px,1fr));
+  grid-gap: 3rem;
   background-color: white;
   padding-bottom: 1rem;
   padding-top: none;
@@ -203,8 +204,15 @@ a:active {
   position: relative;
   margin:0 auto;
 }
+.workgrid p{
+  font-size: 0.9rem;
+  color: grey;
+  margin:0;
+  padding-top: 0.3rem;
+}
+
 .fullwidthitem {
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 3;
 }
 
 
