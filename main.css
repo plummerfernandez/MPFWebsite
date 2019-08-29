@@ -191,6 +191,28 @@ a:active {
 }
 
 
+.workgrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+/*  grid-template-columns: repeat(1fr 1fr, minmax(280px,1fr));
+*/  grid-gap: 2rem;
+  background-color: white;
+  padding-bottom: none;
+  padding-top: none;
+  width: 55%;
+  position: relative;
+  margin:0 auto;
+}
+.workgrid p{
+  font-size: 0.9rem;
+  color: grey;
+  margin:0;
+  padding-top: 0.3rem;
+}
+.fullwidthitem {
+  grid-column: 1 / span 2;
+}
+
 
 #grid {  
   z-index:1;
@@ -255,6 +277,7 @@ a:active {
     #grid { width: 87%; grid-gap: 3rem;}
     .topnav {width: 100%;}
     .portfoliogrid {grid-template-columns: auto; width: 90%;}
+    .workgrid {grid-template-columns: auto; width: 90%;}
     .cvgrid {grid-template-columns: auto; width: 87%;}
 
 }
