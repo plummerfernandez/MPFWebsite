@@ -195,19 +195,13 @@ a:active {
   display: grid;
   grid-template-columns: 1fr 1fr;
 /*  grid-template-columns: repeat(1fr 1fr, minmax(280px,1fr));
-*/  grid-gap: 2rem;
+*/  grid-gap: 3rem;
   background-color: white;
-  padding-bottom: none;
+  padding-bottom: 1rem;
   padding-top: none;
   width: 55%;
   position: relative;
   margin:0 auto;
-}
-.workgrid p{
-  font-size: 0.9rem;
-  color: grey;
-  margin:0;
-  padding-top: 0.3rem;
 }
 .fullwidthitem {
   grid-column: 1 / span 2;
