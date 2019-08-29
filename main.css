@@ -207,6 +207,7 @@ a:active {
   color: grey;
   margin:0;
   padding-top: 0.3rem;
+  padding-bottom: 3rem;
 }
 .workgrid img{
   padding-bottom: 3rem;
@@ -285,7 +286,7 @@ a:active {
     #grid { width: 87%; grid-gap: 3rem;}
     .topnav {width: 100%;}
     .portfoliogrid {grid-template-columns: auto; width: 90%;}
-    .workgrid {grid-template-columns: minmax(280px,1fr); width: 90%;}
+    .workgrid {display: block; width: 90%;}
     .cvgrid {grid-template-columns: auto; width: 87%;}
 
 }
