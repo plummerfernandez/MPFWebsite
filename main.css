@@ -199,7 +199,10 @@ a:active {
   margin:0 auto;
   bottom: 0;
 }
-
+#grid img {
+  width: 100%;
+  height: auto;
+}
 
 
 #arrow {
