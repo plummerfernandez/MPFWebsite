@@ -193,14 +193,9 @@ a:active {
 
 .workgrid{
   display: grid;
-/*  grid-template-columns: 1fr 1fr 1fr;
-*/  
-  grid-gap: 2rem;
-  grid-template-columns: 1fr 1fr 1fr, minmax(280px,1fr);
+  grid-gap: 1.5rem;
+  grid-template-columns: minmax(280px,1fr) 1fr minmax(280px,1fr);
   
-/*  background-color: pink;
-  border: 2px solid black;*/
-
   padding-bottom: 3rem;
   padding-top: none;
   width: 55%;
@@ -212,6 +207,9 @@ a:active {
   color: grey;
   margin:0;
   padding-top: 0.3rem;
+}
+.workgrid img{
+  padding-bottom: 3rem;
 }
 
 .fullwidthitem {
@@ -287,7 +285,7 @@ a:active {
     #grid { width: 87%; grid-gap: 3rem;}
     .topnav {width: 100%;}
     .portfoliogrid {grid-template-columns: auto; width: 90%;}
-    .workgrid {grid-template-columns: auto; width: 90%;}
+    .workgrid {grid-template-columns: minmax(280px,1fr); width: 90%;}
     .cvgrid {grid-template-columns: auto; width: 87%;}
 
 }
