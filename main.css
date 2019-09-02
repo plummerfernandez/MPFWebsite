@@ -311,7 +311,7 @@ a:active {
     #grid { width: 87%; grid-gap: 3rem;}
     .topnav {width: 100%;}
     .portfoliogrid {grid-template-columns: auto; width: 90%;}
-    .workgrid {display: block; width: 100%;}
+    .workgrid {display: block; width: 90%;}
     .cvgrid {grid-template-columns: auto; width: 87%;}
 
 }
