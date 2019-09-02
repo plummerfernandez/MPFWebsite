@@ -37,6 +37,7 @@ body {
 
 
 h1{
+/*  work titles*/  
   font-family: "Averia Serif Libre", Serif;
   color: black;
   font-weight: lighter;
@@ -77,6 +78,7 @@ h3{
 }
 
 h5{
+  /*caption*/
   font-size: 0.8rem;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.9);
@@ -85,7 +87,8 @@ h5{
   line-height: 1.4;
   margin:0;
   padding-top: 0;
-  font-smooth: auto;
+/*  padding-left: 1rem;
+*/  font-smooth: auto;
 }
 
 p {
@@ -218,24 +221,26 @@ a:active {
 
 .workgrid{
   display: grid;
-  grid-gap: 1.5rem;
+  grid-gap: 1rem;
   grid-template-columns: minmax(280px,1fr) 1fr minmax(280px,1fr);
   
   padding-bottom: 2rem;
   padding-top: none;
-  width: 55%;
+  width: 60%;
   position: relative;
   margin:0 auto;
 }
 .workgrid p{
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: black;
   margin:0;
   padding-top: 0.3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 3rem;
 }
 .workgrid img{
-  padding-bottom: 3rem;
+  padding-bottom: 0;
 }
 
 .fullwidthitem {
@@ -243,6 +248,9 @@ a:active {
 }
 .twothirdsitem {
   grid-column: 1 / span 2;
+}
+.secondtwothirdsitem {
+  grid-column: 2 / span 2;
 }
 .doubleheightitem {
   grid-column: 2 / span 1;
@@ -306,7 +314,7 @@ a:active {
   border-bottom-right-radius: 1rem;
 }
 
-/* If in mobile screen with maximum width 479px. The iPhone screen resolution is 320x480 px (except iPhone4, 640x960) */    
+/* If in mobile screen with maximum width 749px. (iPhone4 res is 640x960) */    
 @media only screen and (max-width: 749px){
     #grid { width: 87%; grid-gap: 3rem;}
     .topnav {width: 100%;}
