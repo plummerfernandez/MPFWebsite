@@ -323,7 +323,6 @@ a:active {
     .cvgrid {grid-template-columns: auto; width: 87%;}
     h1{padding-left: 1.5rem; padding-right: 2rem;}
     h5{padding-left: 1.5rem; padding-right: 2rem;}
-    .workgrid p{font-size: 0.85rem; padding-left: 1.5rem; padding-right: 2rem;
-}
+    .workgrid p{font-size: 0.85rem; padding-left: 1.5rem; padding-right: 2rem;}
 
 }
