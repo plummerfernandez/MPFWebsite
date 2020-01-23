@@ -3,237 +3,84 @@
 
 <html>
   <head>
-    <title>🗿 Matthew Plummer-Fernandez 🗿</title>
+    <title>Matthew Plummer-Fernandez</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Montserrat&display=swap" rel="stylesheet"> 
     <link type="text/css" rel="stylesheet" href="main.css">
-    <style>
-       body {background-color: white;}
-    </style>
   </head>
 
-<body onscroll="clearMesh()">
+<body>
 
- 
 
-<!-- Top Navigation Menu -->
-<div class="topnav">
-  <div id="myLinks">
-    <br>
-    <a href="#about">About</a>
-    <a href="/portfolio.html">Works</a>
-    <a href="/current.html">Work in progress</a>
-    <a href="/writing.html" >Writing</a>
-    <a href="#news" >News</a>
-    <a href="#contact" >Contact</a><br>
+<div class="logo">
+    <span id ="topofpage"></span>
+  <br><h4>M_PF</h4><br><br>
+    <span class="subheader c1" onclick="switchVisible(this)"><a>News</a></span> //
+    <span class="subheader c3" onclick="switchVisible(this)"><a>About</a></span> //
+    <span class="subheader c6" onclick="switchVisible(this)"><a>CV</a></span> //
+    <span class="subheader c4" onclick="switchVisible(this)"><a>Writing</a></span> //
+    <span class="subheader c5" onclick="switchVisible(this)"><a>Works</a></span> //
+    <span><a href="#debugview">Works-in-progress</a></span> //
+    <span class="subheader c2" onclick="switchVisible(this)"><a>Contact</a></span>
+
+ <br>
+</div>
+
+  <div class="menugrid">
+  
+  <div id="hidden1" class="c1 hideContent"> 
+  <br><br>
+   15.01.20 - The magazine <i>Art in America</i> has a special on generative art for which I've written an article titled Bots vs AI. 
+   <br>
+   <br>
+   11.07.19 - My PhD thesis is now <a href="http://research.gold.ac.uk/26599/"> public</a>. The practice-based study, funded by AHRC, is titled <i>The art of bots: A practice-based study of the multiplicity, entanglements and figuration of sociocomputational assemblages</i>, and was conducted at Goldsmiths, University of London.
   </div>
-  <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
-    <img src="/icons/menu.png" alt="Menu" height="24" width="24">
-  </a>
-</div>
-
-<script>
-function menuFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-</script>
-
-<!-- 
-<div id="buttons">
-    <a href="#" id="testButton1">Scene 1</a><br>
-    <a href="#" id="testButton2">Scene 2</a><br>
-    <a href="#" id="testButton3">Scene 3</a>
-</div> -->
 
 
-  <div id="three" >
-
-  <script src="/threejs/three.min.js"></script>
-  <script src="/threejs/OrbitControls.js"></script>
-  <script src="/threejs/GLTFLoader.js"></script>
-
-
-  <script>
-    //threejs script
-    var camera, scene, renderer, controls;
-    var geometry, material, mesh, rock, dirLight, hemiLight;
-    init();
-    animate();
-    //// activate this for controlling camera
-
-    
-    
-    // testButton1.onclick = function () {
-    //   changeview(0, 1, 0);
-    // };
-    // testButton2.onclick = function () {
-    //   changeview(0.5, 0.5, 0);
-    // };
-    // testButton3.onclick = function () {
-    //   changeview(0, 0, 0);
-    // };
+  <div id="hidden2" class="c2 hideContent">
+     <br><br>
+    <a href="mailto:plummerfernandez@gmail.com" >plummerfernandez@gmail.com</a><br>
+    <a href="http://www.twitter.com/M_PF">Twttr</a> / <a href="http://www.instagram.com/plummerfernandez">Instagram</a> / <a href="http://www.github.com/plummerfernandez">GitHub</a> / <a href="https://botsin.space/@m_pf">Mastodon</a>
+    <br>
+  </div>
 
 
 
-function init() {
 
-  camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
-  camera.position.z = 1;
-
-  scene = new THREE.Scene();
-
-  
-  //scene.background = new THREE.Color( 0xffd47d );
-
-  //geometry = new THREE.BoxGeometry( 0.4, 0.4, 0.4 );
-  //--material = new THREE.MeshNormalMaterial(  );
-  //material = new THREE.MeshLambertMaterial({color: 0xffffff});
-
-  //mesh = new THREE.Mesh( geometry, material );
-  //scene.add( mesh );
-  //mesh.rotation.x = 0.5;
-  //mesh.rotation.y = 0.5;
-// add rock2.gltf file
-  var loader = new THREE.GLTFLoader();
-  loader.load( '/threejs/rock.gltf', function ( gltf ) {
-
-      rock = gltf.scene;
-      scene.add( rock );
-      rock.scale.set(0.2,0.2,0.2);
-
-  }, undefined, function ( error ) {
-    console.error( error );
-  } );
-
-
-
-  hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 1.5 );
-          hemiLight.color.setHSL( 0.6, 1, 0.6 );
-          hemiLight.groundColor.setHSL( 0.095, 1, 0.75 );
-          hemiLight.position.set( 0, 500, 0 );
-          scene.add( hemiLight );
-
-  dirLight = new THREE.DirectionalLight( 0xffffff, 2 );
-          dirLight.color.setHSL( 0.1, 1, 0.95 );
-          dirLight.position.set( -5, 1.75, 4 );
-          dirLight.position.multiplyScalar( 30 );
-          scene.add( dirLight );
-          dirLight.castShadow = true;
-  
-
-  container = document.getElementById( 'three' );
-  document.body.appendChild( container );
-
-  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-  renderer.setClearColor( 0x000000, 0 ); // the default
-  renderer.setSize( window.innerWidth, window.innerHeight );
- // renderer.setSize( 500, 500 );
-  container.appendChild( renderer.domElement );
-  
-  renderer.render(scene, camera);
-
-  controls = new THREE.OrbitControls(camera, renderer.domElement);
-  
-  
-  
-}
-
-function animate() {
-  requestAnimationFrame( animate );
-  
-  //mesh.rotation.x += 0.0005;
-  //mesh.rotation.y += 0.005;
-  if(rock){
-  rock.rotation.x += 0.002;
-  rock.rotation.y += 0.003;
-  controls.update();
-  renderer.render( scene, camera );
-  }
-}
-
-// -- my function for changing viewpoint on button press
-// function changeview($x,$y,$z) {
-//    controls.reset();
-//    mesh.rotation.x = $x;
-//    mesh.rotation.y = $y;
-//    mesh.rotation.z = $z;
-//    renderer.render(scene, camera);
-// }
-
-</script>
-
-</div>
-
-<script>
-function clearMesh() {
-  document.getElementById("three").style.zIndex = "-1";
-  // document.getElementById("three").style.opacity = "0.4";
-  console.log("clearMesh called");
-
-
-}
-
-</script>
-
-
-
-<div class="full-height"><h2><i>M PF</i></h2></div>
-
-<div class="transparency">
-
-<div id="grid">
-  
-    <h4><a href="#about" id="arrow">▼</a></h4>
-  
-  <div id ="about">
+  <div id="hidden3" class="c3 hideContent"> 
     <br><br>
-<h2>Hello, I'm Matthew Plummer Fernández, I'm an artist with a varied background in design, research and engineering (but really, all these practices are interwoven into what I do). My <a href="/portfolio.html">works</a> relate to copyleft culture, 3D printing, bots and everyday software automation, and my <a href="/current.html">current projects</a> additionally connect with my interests in the commons, ecology, and ontological design. My achievements include an award of Distinction at Ars Electronica, having several works exhibited and collected by Centre Pompidou in Paris, and obtaining an AHRC-funded doctorate in design at Goldsmiths, University of London. I'm half British, half Colombian, and based in the UK.<br><br></h2>
-</div>
-</div>
 
-<div id="grid">
-  <div id="news">
-    <br>
-<h2>Announcements</h2>
-    <p>11.07.19 - My PhD thesis is now <a href="http://research.gold.ac.uk/26599/"> public</a>. The thesis concludes a four-year practice-based study, funded by AHRC, into artbot practices. It is titled <i>The art of bots: A practice-based study of the multiplicity, entanglements and figuration of sociocomputational assemblages</i>, and was conducted at Goldsmiths, University of London.</p>
+  
+    British/Colombian artist Matthew Plummer-Fernandez works across sculpture, print, software, and installation. After receiving an MA from London's Royal College of Art in 2009, he completed his practice-based doctorate at Goldsmiths, University of London, in 2019. Plummer-Fernandez's interests in copyleft culture, digital fabrication, and social-computational entanglements, interrelate to form a varied body of work that is influenced by the artistic traditions of Generative Art, Critical Design, and Internet Art. His more recent works further borrow from Regenerative Design.
+    <br><br>
+ 
+    Plummer-Fernandez's work has been exhibited extensively, and commissioned by institutions including Somerset House, London, ZKM, Karlruhe, AND Festival, Manchester, and the Victoria & Albert Museum in London. His works Digital Natives and Disarming Corruptor are in the collection of Centre Pompidou in Paris, and in 2014 Disarming Corruptor received an award of distinction at Ars Electronica. Plummer-Fernandez is represented by Nome gallery, Berlin. He is currently an associate lecturer at the University of Arts, London, and a visiting researcher at Goldsmiths.
+   <br><br>
+
+
   </div>
-</div>
 
-<div id="grid">
-  <div id="contact">
-    <br>
-  <h2>Contact</h2>
-    <a href="mailto:matthew@plummerfernandez.com" >plummerfernandez@gmail.com</a><br>
-    
 
-    <ul class="social-icons">
-        <li><a href="http://www.twitter.com/M_PF" class="social-icon"> <img src="/icons/twitter.png" alt="Twitter" height="32" width="32"></a></li>
-        <li>&nbsp;</li>
-        <li><a href="http://www.instagram.com/plummerfernandez" class="social-icon"> <img src="/icons/instagram.png" alt="Instagram" height="32" width="32"></a></li>
-        <li>&nbsp;</li>
-        <li><a href="http://www.github.com/plummerfernandez" class="social-icon"> <img src="/icons/github.png" alt="GitHub" height="32" width="32"></a></li>
-        <li>&nbsp;</li>
-        <li><a href="https://botsin.space/@m_pf" class="social-icon"> <img src="/icons/mastodon.png" alt="Mastodon" height="32" width="32"></a></li>
-    </ul>
-    <br>
+
+  <div id="hidden4" class="c4 hideContent">
+    <br><br>
+    2020<br><br>
+    <i>AI v Bots</i>, Art in America, January issue (URL soon)
+    <br><br>2019<br><br>
+    PhD thesis - <a href="http://research.gold.ac.uk/26599/"><i>The art of bots: A practice-based study of the multiplicity, entanglements and figuration of sociocomputational assemblages.</i></a> Goldsmiths, University of London.
+    <br><br>2015<br><br>
+    <i><a href="http://avant.org/project/21st-century-people/">People of the 21st Century</a></i>, Avant Magazine
+    <br><br>2014<br><br>
+    <i><a href="https://www.grafik.net/category/screenshot/popular-protest">Popular Protest</a></i>, Grafik Magazine
   </div>
-</div>
 
 
- <div id="grid">
-   <h2>Profile</h2>
-</div>
+  <div id="hidden5" class="c5 hideContent"></div>
 
- <div class="cvgrid">
-  <div id="cv1">
-    <p>
-    <a href ="/M_Plummer-Fernandez__CV2019.pdf"> Download CV</a><br><br>    
+
+  <div id="hidden6" class="c6 hideContent">
+    <br><br>
+       <a href ="/M_Plummer-Fernandez__CV2019.pdf"> Download CV as pdf</a><br><br>    
     Born in London, 1982<br>
     Lived in Colombia 89-99<br>
     Currently based in UK</a>
@@ -266,7 +113,7 @@ function clearMesh() {
     <br>
 
     <br>
-    <b>Selected Group Shows</b><br>
+    <b>Group Shows</b><br>
 
     <br>
     <i>2019 Future Relics</i>, Vector Festival, Toronto CA<br>
@@ -360,12 +207,9 @@ function clearMesh() {
     <i>2007 Designersblock</i>, London Design Festival, UK<br>
     <br>
 
-
     <br><br>
 
-
-
-    <b>Selected Press and Books</b><br>
+    <b>Press and Publications</b><br>
 
     <br>
     <i>2018</i> Ian Youngs for BBC<br>
@@ -418,13 +262,9 @@ function clearMesh() {
     <br>
     <i>2008</i> Data Flow, Gestalten (book)<br>
 
-    <br>
-    </p>
-
-  </div>
-
-  <div id="cv2">    
-    <p>    
+    <br><br>
+  
+       
 
     <b>Curation</b><br>
 
@@ -435,7 +275,7 @@ function clearMesh() {
     <i>2017 My Wall is Your Filter Bubble,</i> Abandon Normal Devices Festival, Peak District, UK<br>
 
     <br>
-    <i>2016 Art of Bots</i>, Abandon Normal Devices, Somerset House,, London, UK<br><br>
+    <i>2016 Art of Bots</i>, Abandon Normal Devices, Somerset House, London, UK<br><br>
 
 
 
@@ -463,13 +303,17 @@ function clearMesh() {
 
     <br>
     <i>2016</i> iMal, BE<br>
+
+    <br>
+    <i>2015</i> National Football Museum, UK<br>
     <br><br>
-
-
 
     <br>
     <b>Funding and Grants </b><br>
-
+    
+    <br>
+    <i>2020</i> Visiting Researcher Fellowship, Centre for Invention and Social Process, Goldsmiths, University of London<br>
+    <br>
 
     <br>
     <i>2014—2017</i> AHRC Design Star Centre for Doctoral Training, Funding Award<br>
@@ -485,7 +329,7 @@ function clearMesh() {
 
 
     <br>
-    <b>Selected Lectures</b><br>
+    <b>Lectures</b><br>
 
     <br>
     <i>2019</i> The Photographers' Gallery, London, UK<br>
@@ -547,15 +391,17 @@ function clearMesh() {
 
 
     <br>
-    <b>Selected Research</b><br>
+    <b>Research</b><br><br>
 
 
+    <i>2020-</i> Visiting Researcher Fellow, Centre for Invention and Social Process, Goldsmiths, University of London<br>
     <br>
+
     <i>2014—2019</i> AHRC-funded PhD, <i><a href="http://research.gold.ac.uk/26599/"> The Art of Bots</a></i>, Goldsmiths, University of London<br>
 
 
     <br>
-    <i>2018 </i>Book,<i> Energy Babble</i> (Gaver et al) Mattering Press<br>
+    <i>2018 </i>Book contribution,<i> Energy Babble</i> (Gaver et al) Mattering Press<br>
 
 
     <br>
@@ -581,6 +427,15 @@ function clearMesh() {
     <b>Teaching and Workshops</b><br>
 
     <br>
+    <i>2020-</i> Associate Lecturer, Creative Computing Institute, UAL, UK<br>
+
+    <br>
+    <i>2019-</i> Associate Lecturer, MA Interaction, LCC, UAL, UK<br>
+    
+    <br>
+    <i>2019-</i> Associate Lecturer, BA UX Design, LCC, UAL, UK<br> 
+
+    <br>
     <i>2019</i> Workshop, School of Machines, Berlin, DE<br>
 
     <br>
@@ -602,10 +457,276 @@ function clearMesh() {
     2013 TA, BA and MA Design, Goldsmiths, London, UK<br>
     <br>
 
-    </p>
-    </div>
   </div> 
 
-</div> 
+
+
+
+</div>
+<br><br><br>
+</div>
+
+
+
+
+<script>
+function switchVisible(el) {
+  var classN = el.classList.value.split(' ')[1];
+  if(classN == 'c1'){
+    document.querySelector('.menugrid .c1').classList.toggle('hideContent');
+  }
+  else if(classN == 'c2'){
+    document.querySelector('.menugrid .c2').classList.toggle('hideContent');
+  }
+  else if(classN == 'c3'){
+    document.querySelector('.menugrid .c3').classList.toggle('hideContent');
+  }
+  else if(classN == 'c4'){
+    document.querySelector('.menugrid .c4').classList.toggle('hideContent');
+  }
+  else if(classN == 'c5'){
+    document.querySelector('.menugrid .c5').classList.toggle('hideContent');
+  }
+  else if(classN == 'c6'){
+    document.querySelector('.menugrid .c6').classList.toggle('hideContent');
+  }
+  var arrayOfElements = document.querySelectorAll('.menugrid div').forEach(function(div,i){
+    if(!div.classList.value.includes(classN) && !div.classList.value.includes('hideContent')){
+      div.classList.toggle('hideContent');
+    }
+  });
+}
+</script>
+
+
+<div class="portfoliogrid">
+  <div id="echoalarm">
+    <a href="/works/echo-alarm">
+    <img src="/images/plummer-fernandez_echo-alarm--thumb.jpg" alt="Echo Youth" width =100%><br>
+    <h4>Echo Alarm</h4></a>
+    <h5>2019<br>Stickers that make protest placards appear in augmented reality.</h5>
+  </div>
+  <div id="shivinteger">
+    <a href="/works/shiv-integer">
+    <img src="/images/plummer-fernandez_shiv-integer--thumb.jpg" alt="Shiv Integer" width =100%><br>
+    <h4>Shiv Integer</h4></a>
+    <h5>2016<br>A bot that made mash-ups of things from Thingiverse. In collaboration with Julien Deswaef.</h5>
+  </div>
+  <div id="Every Mickey">
+    <a href="/works/every-mickey">
+    <img src="/images/plummer-fernandez_every-mickey--thumb.jpg" alt="Every Mickey" width =100%><br>
+    <h4>Every Mickey</h4></a>
+    <h5>2017<br>A composite of every model of Mickey found online.</h5>
+  </div>
+<!--   <div id="Cat Sat">
+    <img src="/images/plummer-fernandez_citizen_rewilding--thumb.jpg" alt="Cat Sat" width =100%><br>
+    <h4>Cat Sat</h4>
+    <h5>2019<br>An AR cat sat on a robotic vacuum cleaner.</h5>
+  </div> -->
+  <div class="Snowden.ppt">
+    <a href="/works/snowden-ppt">
+    <img src="/images/plummer-fernandez_snowden-ppt--thumb.jpg" alt="Snowden.ppt" width =100%><br>
+    <h4>Snowden.ppt</h4></a>
+    <h5>2017<br>Snowden portraits in the style of leaked NSA powerpoint slides .</h5>
+  </div>
+  <div class="Token Homes">
+    <a href="/works/token-homes">
+    <img src="/images/plummer-fernandez_token-homes-b--thumb.jpg" alt="Token Homes" width =100%><br>
+    <h4>Token Homes</h4></a>
+    <h5>2018<br>Public art as property scheme comprising miniature investment assets.</h5>
+  </div>
+  <div class="Intersecting stone study">
+    <a href="/works/intersecting-stone-study">
+    <img src="/images/plummer-fernandez_intersecting-stone-study--thumb.jpg" alt="Intersecting stone study" width =100%><br>
+    <h4>Intersecting stone study</h4></a>
+    <h5>2018<br>A study of intersecting stones with 3D prints.</h5>
+  </div>  
+  <div class="Customers who also bought">
+    <a href="/works/customers-who-also-bought">
+    <img src="/images/plummer-fernandez_customers--thumb.jpg" alt="Customers who also bought" width =100%><br>
+    <h4>Customers who also bought</h4></a>
+    <h5>2017<br>Portraits of Amazon customers composed of their personalised reccomendations.</h5>
+  </div>
+  <div class="Material Want">
+    <a href="/works/material-want">
+    <img src="/images/plummer-fernandez_material-want--thumb.jpg" alt="Material Want" width =100%><br>
+    <h4>Material Want</h4></a>
+    <h5>2016<br>An internet archeology in collaboration with JODI.</h5>
+  </div>
+  <div class="Baked light study">
+    <a href="/works/baked-light-study">
+    <img src="/images/plummer-fernandez_baked-light-study--thumb.jpg" alt="Baked light study" width =100%><br>
+    <h4>Baked light study</h4></a>
+    <h5>2016<br>A simulation of light, 'baked' onto the surface of objects.</h5>
+  </div>
+  <div class="Petita Tatata">
+    <a href="/works/petita-tatata">
+    <img src="/images/plummer-fernandez_petita-tatata--thumb.jpg" alt="Petita Tatata" width =100%><br>
+    <h4>Petita Tatata</h4></a>
+    <h5>2016<br>A soundcloud bot that recites abstract poetry.</h5>
+  </div>
+  <div class="Peak Simulator">
+    <a href="/works/peak-simulator">
+    <img src="/images/plummer-fernandez_peak-simulator--thumb.jpg" alt="Peak Simulator" width =100%><br>
+    <h4>Peak Simulator</h4></a>
+    <h5>2016<br>A computer-generated landscape in a landscape.</h5>
+  </div>
+  <div class="Novice Art Blogger">
+    <a href="/works/novice-art-blogger">
+    <img src="/images/plummer-fernandez_novice-art-blogger-b--thumb.jpg" alt="Novice art blogger" width =100%><br>
+    <h4>Novice art blogger</h4></a>
+    <h5>2014<br>A bot art critic that studies abstract art using computer vision.</h5>
+  </div>
+  <div class="Decoy Browsing Triptych">
+    <a href="/works/decoy-browsing-triptych">
+    <img src="/images/plummer-fernandez_decoy-browsing--thumb.jpg" alt="Decoy Browsing Triptych" width =100%><br>
+    <h4>Decoy Browsing Triptych</h4></a>
+    <h5>2015<br>Browser extensions to randomise browsing and circumvent profiling.</h5>
+  </div>
+  <div class="Every User">
+    <a href="/works/every-user">
+    <img src="/images/plummer-fernandez_every_user-b--thumb.jpg" alt="Every User" width =100%><br>
+    <h4>Every User</h4></a>
+    <h5>2014<br>A list of every Twitter user, compiled by a Twitter bot.</h5>
+  </div>
+  <div class="All Eyes">
+    <a href="/works/all-eyes">
+    <img src="/images/plummer-fernandez_all-eyes--thumb.jpg" alt="All Eyes" width =100%><br>
+    <h4>All Eyes</h4></a>
+    <h5>2014<br>A photographic collection of computationally found eyes.</h5>
+  </div>    
+  <div class="The Codification of Leadership">
+    <a href="/works/the-codification-of-leadership">
+    <img src="/images/plummer-fernandez_codification-of-leadership--thumb.jpg" alt="The Codification of Leadership" width =100%><br>
+    <h4>The Codification of Leadership</h4></a>
+    <h5>2014<br>Software-generated paintings of Bush signing the patriot act, the homeland act, and the surveillance reform act.</h5>
+  </div>
+  <div class="Venus of Google">
+    <a href="/works/venus-of-google">
+    <img src="/images/plummer-fernandez_venus-of-google--thumb.jpg" alt="Venus of Google" width =100%><br>
+    <h4>Venus of Google</h4></a>
+    <h5>2013<br>A computer-generated figurine based on a Google image search.</h5>
+  </div>
+  <div class="Smooth Operator">
+    <a href="/works/smooth-operator">
+    <img src="/images/plummer-fernandez_smooth-operator--thumb.jpg" alt="Smooth Operator" width =100%><br>
+    <h4>Smooth Operator</h4></a>
+    <h5>2013<br>Mickey Mouse 'blurred' until it is no longer considered Mickey.</h5>
+  </div>
+  <div class="Disarming Corruptor">
+    <a href="/works/disarming-corruptor">
+    <img src="/images/plummer-fernandez_disarming-corruptor--thumb.png" alt="Disarming Corruptor" width =100%><br>
+    <h4>Disarming Corruptor</h4></a>
+    <h5>2013<br>A free software application for encrypting 3D print files by scrambling the geometry. Awarded by Ars Electronica.</h5>
+  </div>
+  <div class="Sekumoi Mecy">
+    <a href="/works/sekumoi-mecy">
+    <img src="/images/plummer-fernandez_sekumoi-mecy--thumb.jpg" alt="Sekumoi Mecy" width =100%><br>
+    <h4>Sekumoi Mecy</h4></a>
+    <h5>2012<br>An anagram of Mickey Mouse, and the first of several works investigating this symbol of copyright and its limits.</h5>
+  </div>
+  <div class="Digital Natives">
+    <a href="/works/digital-natives">
+    <img src="/images/plummer-fernandez_digital-natives--thumb.jpg" alt="Digital Natives" width =100%><br>
+    <h4>Digital Natives</h4></a>
+    <h5>2012<br>Vessels made by degrading and remixing 3D scans of household items with custom software. Collected by Centre Pompidou.</h5>
+  </div>
+  <div class="We Met Heads On">
+    <a href="/works/we-met-heads-on">
+    <img src="/images/plummer-fernandez_we-met-heads-on--thumb.jpg" alt="We Met Heads On" width =100%><br>
+    <h4>We Met Heads On</h4></a>
+    <h5>2012<br>An animation using 3D scans of statue heads from the Metropolitan Museum.</h5>
+  </div>
+  <div class="Algopop">
+    <a href="/works/algopop">
+    <img src="/images/plummer-fernandez_algopop--thumb.jpg" alt="Algopop" width =100%><br>
+    <h4>Algopop</h4></a>
+    <h5>2012 &#x2014; 2019<br>A Tumblr blog documenting "the appearance of algorithms in popular culture and everyday life".</h5>
+  </div>
+  <div class="Glitch Reality">
+    <a href="/works/glitch-reality">
+    <img src="/images/plummer-fernandez_glitch-reality--thumb.jpg" alt="Glitch Reality" width =100%><br>
+    <h4>Glitch Reality</h4></a>
+    <h5>2011<br>A collection of works exploring imperfect and incomplete replicas of 3D scans.</h5>
+  </div>
+</div>
+
+<div id="grid">
+  <br><br>
+<h4>Early works, 2007 - 2009</h4><br>
+</div>
+
+
+<div class="portfoliogrid">
+  <div class="Apifera">
+    <a href="/works/apifera">
+    <img src="/images/plummer-fernandez_apifera--thumb.jpg" alt="Apifera" width =100%><br>
+    <h4>Apifera</h4></a>
+    <h5>2009<br>Using a fibonacci spiral, as found in sunflowers, to lure people towards a window.</h5>
+  </div>
+  <div class="Ink on Paper">
+    <a href="/works/ink-on-paper">
+    <img src="/images/plummer-fernandez_ink-on-paper--thumb.jpg" alt="Ink on Paper" width =100%><br>
+    <h4>Ink on Paper</h4></a>
+    <h5>2009<br>A kinetic installation that dropped ink in patterns onto a paper environment.</h5>
+  </div>
+  <div class="Sound Chair">
+    <a href="/works/sound-chair">
+    <img src="/images/plummer-fernandez_sound-chair--thumb.jpg" alt="Sound Chair" width =100%><br>
+    <h4>Sound / Chair </h4></a>
+    <h5>2007<br>A carefully crafted sound, that when visualised on a 3D graph, resembles an armchair.</h5>
+  </div>
+  <div class="Analog Website">
+    <a href="/works/analog-website">
+    <img src="/images/plummer-fernandez_analog-website--thumb.jpg" alt="Analog Website" width =100%><br>
+    <h4>Analog Website</h4></a>
+    <h5>2007<br>A physical website you browse by controlling a webcam on a train-track.</h5>
+  </div>
+</div>
+
+
+<div id="grid">
+  <div id="debugview"></div>
+  <br><br>
+<h4>Works-in-progress / behind-the-scenes</h4><br>
+</div>
+
+<div class="portfoliogrid">
+  <div class="Vertical Commons">
+    <a href="/works/vertical-commons">
+    <img src="/images/plummer-fernandez_vertical-commons--thumb.jpg" alt="vertical-commons" width =100%><br>
+    <h4>Vertical Commons</h4></a>
+    <h5>Open-source and regenerative structures supporting interwoven needs for agroecology, carbon sequestration and biodiversity. The ontological design of a "vertical commons".</h5>
+  </div>
+  <div class="rebel-rewilding">
+    <a href="/works/rebel-rewilding">
+    <img src="/images/plummer-fernandez_citizen_rewilding--thumb.jpg" alt="rebel-rewilding" width =100%><br>
+    <h4>Rebel Rewilding</h4></a>
+    <h5>The formation of a community that intervenes where possible to help restore and expand local ecologies.</h5>
+  </div>
+  <div class="studio-documentation">
+    <a href="/works/studio-documentation">
+    <img src="/images/plummer-fernandez_citizen_rewilding--thumb.jpg" alt="Studio documentation" width =100%><br>
+    <h4>Studio documentation</h4></a>
+    <h5>Miscellaneous documentation of studio practice including sketches and prototypes.</h5>
+  </div>
+   <div class="studio-documentation">
+    <a href="/works/studio-documentation">
+    <img src="/images/plummer-fernandez_citizen_rewilding--thumb.jpg" alt="Studio documentation" width =100%><br>
+    <h4>Studio documentation</h4></a>
+    <h5>Miscellaneous documentation of studio practice including sketches and prototypes.</h5>
+  </div>   
+</div>
+
+
+<!-- Row 6 -->
+  <div id="grid">
+  <h4><a href="#topofpage">Menu</a></h4>
+  <br><br>
+  </div>
+
+
+
 </body>
+
 </html>

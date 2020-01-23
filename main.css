@@ -4,76 +4,104 @@ html, body {
   scroll-behavior: smooth;
 }
 body {
-  /*background-color: #ffd47d;*/
+  background-color: #ffcccc;
   /*background-color:#d4baba;*/
-  background-color:white;
-  text-align: left;
-  font-family: 'Montserrat', sans-serif;
+/*  background-color:white;
+*/  text-align: left;
   line-height: 1.5;
   font-smooth: auto;
+  font-family: "Georgia";
+  font-size: 1rem;
   margin: 0 !important;
   padding: 0 !important;
+  font-smooth: auto;
+}
+
+.indexMenu{
+  color: white;
+  font-family: sans-serif;
+  font-size: 2rem;
+  text-align: right;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  line-height: 2rem;
+  position:fixed;  
 }
 
 
-.full-height {
-  z-index:-2;
-  position: relative;
-  height: 83%;
-  text-align: center;
-  bottom: 0;
-/*  background: #ffd47d;
-*/}
-
 .logo {
-  z-index:-2;
+  z-index: 1;
   position: relative;
   text-align: center;
   bottom: 0;
+  cursor: pointer;
 /*  background: #ffd47d;
 */}
 
+.logo a:link{
+  text-decoration: none;
+   border-bottom: none;
+}
+
+.logo a:hover{
+  text-decoration: none;
+   border-bottom: none;
+   color: rgba(0, 0, 0, 0.9);
+  border-bottom: 2px solid #000;
+  padding-bottom: 3px;
+}
+
+
+.hideContent{
+  display:none;
+}
 
 h1{
 /*  work titles*/  
-  font-family: "Averia Serif Libre", Serif;
+  font-family: Georgia;
   color: black;
   font-weight: lighter;
-  font-style: italic;
-  font-size: 1.2rem;
-  line-height: 1.3;
+  font-size: 1rem;
+  line-height: 3;
   margin:0;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
 h2{
-  /*intro*/
-  font-family: "Averia Serif Libre", Serif;
-  font-weight: lighter;
-  font-size: 1.3rem;
-  line-height: 1.3;
-  padding:none;
+  text-align: center;
+  color: #ffd47d;
+  font-style: italic;
+  font-family: "Times New Roman";
+  font-size: 15rem;
+  line-height: 3rem;
+  margin:0;
+  padding-top: 0.5rem;
+  text-shadow: 3px 3px 0px rgba(220,160,20,.9), -2px -2px 0px rgba(255,255,240,.9); /* 50% black coming from the bottom */
 }
 
  h4{
-  font-family: "Averia Serif Libre", Serif;
-  font-weight: lighter;
-  font-size: 1.5rem;
-  line-height: 1.3;
-  padding:none;
-  text-align: center;
-}
-
-
-h3{
-  font-family: "Averia Serif Libre", Serif;
+  font-family: Georgia;
   font-weight: lighter;
   font-style: italic;
   font-size: 1rem;
   line-height: 1.3;
+  padding:none;
+  text-align: center;
+
+}
+
+
+h3{
+  text-align: left;
+  color: #ffd47d;
+  font-size: 4rem;
+  font-family: "Times New Roman";
+  font-style: italic;
+  line-height: 2.6rem;
   margin:0;
   padding-top: 0.3rem;
+  text-shadow:  2px 2px 0px rgba(220,160,20,.8), -1.5px -1.5px 0px rgba(255,255,240,.9); /* 50% black coming from the bottom */
 }
 
 h5{
@@ -81,20 +109,17 @@ h5{
   font-size: 0.8rem;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.9);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Georgia';
   font-style: normal;
   line-height: 1.4;
   margin:0;
   padding-top: 0;
-/*  padding-left: 1rem;
-*/  font-smooth: auto;
+  font-smooth: auto;
 }
 
 p {
   font-size: 1rem;
   font-weight: 400;
-	color: rgba(0, 0, 0, 0.9);
-	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
 	line-height: 1.5;
   margin:0;
@@ -105,18 +130,6 @@ p {
 ul {
     padding:0;
     list-style: none;
-}
-
-.social-icons li {
-    vertical-align: top;
-    display: inline;
-    height: 10rem;
-    text-decoration: none;
-    font-size: 2rem;
-}
-.social-icons a:link{
-	text-decoration: none;
-	 border-bottom: none;
 }
 
 
@@ -130,6 +143,7 @@ a:link {
 /* visited link */
 a:visited {
   color: black;
+  text-decoration: none;
 }
 
 /* mouse over link */
@@ -142,24 +156,19 @@ a:hover {
 /* selected link */
 a:active {
   color: grey;
-}
-
-#three {
-  position: fixed;
-  z-index:1;  
-  opacity: 1;
+  text-decoration: none;
 }
 
 
-#buttons {
-  position:fixed;  
-  z-index:2;  
-  margin-top: 80px;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: 10px;
-  visibility: hidden;
+.menugrid{
+   display: grid; 
+   grid-template-columns: 1fr;
+   grid-gap: 3rem; 
+   width: 33%;
+   position: relative;
+   margin:0 auto;
 }
+
 
 .cvgrid{
    display: grid; 
@@ -170,14 +179,15 @@ a:active {
    margin:0 auto;
 }
 
+.fullwidth {
+  grid-column: 1 / span 2;
+}
+
+
 .portfoliogrid {
   display: grid;
-/*  grid-template-columns: auto auto auto;
-    grid-template-columns: 1fr 1fr 1fr;
-*/  
   grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
   grid-gap: 4rem;
-  background-color: white;
   padding-bottom: 1rem;
   padding-top: 1rem;
   width: 75%;
@@ -185,16 +195,15 @@ a:active {
   margin:0 auto;
 }
 .portfoliogrid > div {
-  background-color: white;
   text-align: center;
   padding-bottom: 0.5rem;
   margin:0 auto;
 }
 .portfoliogrid p{
   font-size: 0.9rem;
-  color: grey;
-  margin:0;
-  padding-top: 0.3rem;
+/*  color: grey;
+*/  margin:0;
+  padding-top: 0rem;
 }
 .portfoliogrid a:link {
   text-decoration: none;
@@ -264,16 +273,11 @@ a:active {
 }
 
 
-/*#grid img {
-  width: 100%;
-  height: auto;
-}
-*/
-
 #arrow {
   text-decoration: none;
   border-bottom: none;
 }
+
 
 .topnav {
   font-family: 'Averia Serif Libre', sans-serif;
