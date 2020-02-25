@@ -159,6 +159,13 @@ a:active {
   text-decoration: none;
 }
 
+canvas {
+  display: grid;
+  position: relative;
+  margin:0 auto;
+  z-index:1;
+}
+
 
 .menugrid{
    display: grid; 
