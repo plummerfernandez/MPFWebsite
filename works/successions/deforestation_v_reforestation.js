@@ -13,6 +13,7 @@ let decay;
 
 function setup() {
   createCanvas(800, 800);
+  //canvas.parent('sketch-holder');
   smooth(8);
   pixelDensity(2);
   w =8;
@@ -39,13 +40,13 @@ function draw() {
   //background(255);
   decay = decay +1;
   if(decay >=1000){
-    console.log('reset');
+    //console.log('reset');
     reset(5);
     decay=0;
   }
   if(decay == 800 || decay == 500){
     reset(1);
-    console.log('little help');
+    //console.log('little help');
   }
   
   
