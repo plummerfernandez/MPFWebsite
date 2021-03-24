@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+  <head>
+    <title>Not another JPEG</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../../main.css">
+  </head>
+
+<body>
+  
+<div class="workgrid">
+   <!-- Row 0 -->
+  <div class = "fullwidthitem">
+  <br>
+  <script>
+    document.write('<h4><a href="' + document.referrer + '">Menu</a></h4>');
+  </script>
+  </div>
+   <!-- Row 1 -->
+  <div class = "twothirdsitem">
+  <h1><i>Not another JPEG</i></h1>
+  <h5>2021<br>
+    <br>
+    JPEG file</h5>
+      <br>
+    <br>
+
+  <!-- image decoder -->
+  <p id="decoderOutput"></p>
+
+
+  <script type="text/javascript" src="f5extract.min.js"></script>
+  <script type="text/javascript" src="decoder.js"></script>
+
+
+
+  <script type="text/javascript">
+   // NOTE - I embedded a .txt file into the image test.jpeg simply by putting it into the demo site for f5stego.js. http://desudesutalk.github.io/f5stegojs/
+   //(i may have done this step wrong)
+
+    // I now need to make this image into a unit8array, I'm trying this decoder:
+    //https://github.com/jpeg-js/jpeg-js/blob/master/lib/decoder.js
+
+
+    //var jpegData = fs.readFileSync('/works/not-another-jpeg/test.jpeg'); //dont have fs
+    var jpegData = '/works/not-another-jpeg/test.jpeg';
+    var rawImageData = decode(jpegData, {useTArray: true}); // return as Uint8Array
+    console.log(rawImageData);
+   
+    //from f5stego
+    var stegKey = [1,2,3,4,5,6,7,8,9];
+    var f5get = f5extract(stegKey);
+    var unit8message = f5get(rawImageData);
+    console.log(unit8message);
+    //make into string and display on webpage
+    var strMessage = new TextDecoder().decode(unit8message)
+    document.getElementById("decoderOutput").innerHTML = strMessage;
+
+  </script>
+
+
+
+  
+
+
+  </div>
+  <div class = "item">
+  </div>
+
+  <!-- Row 2 -->
+  <div class = "fullwidthitem">
+  </div>
+
+
+   <!-- Row 6 -->
+  <div class = "fullwidthitem">
+  <script>
+    document.write('<h4><a href="' + document.referrer + '">Menu</a></h4>');
+  </script>
+  <br>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>
+
+
