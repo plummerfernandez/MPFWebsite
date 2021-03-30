@@ -15,9 +15,11 @@
    <!-- Row 0 -->
   <div class = "fullwidthitem">
   <br>
-  <script>
+  <h4><a href="../../index.html">Menu</a></h4>
+ <!--  <script>
     document.write('<h4><a href="' + document.referrer + '">Menu</a></h4>');
-  </script>
+  </script> -->
+
   </div>
    <!-- Row 1 -->
   <div class = "twothirdsitem">
@@ -33,7 +35,6 @@
 
 
   <script type="text/javascript" src="f5extract.min.js"></script>
-  <script type="text/javascript" src="decoder.js"></script>
 
 
 
@@ -41,45 +42,83 @@
    // NOTE - I embedded a .txt file into the image test.jpeg simply by putting it into the demo site for f5stego.js. http://desudesutalk.github.io/f5stegojs/
    //(i may have done this step wrong)
 
-    // I now need to make this image into a unit8array, I'm trying this decoder:
-    //https://github.com/jpeg-js/jpeg-js/blob/master/lib/decoder.js
+    var req = new XMLHttpRequest(); //we need to get the jpeg data from the server, so we set up a request
+    req.open("GET", '/works/not-another-jpeg/test2.jpeg', true);
+    req.responseType = "arraybuffer";
 
+    req.onload = function () { // we write a function that gets called when the request returns
+      var rawImageData = new Uint8Array(req.response);
 
-    //var jpegData = fs.readFileSync('/works/not-another-jpeg/test.jpeg'); //dont have fs
-    var jpegData = '/works/not-another-jpeg/test.jpeg';
-    var rawImageData = decode(jpegData, {useTArray: true}); // return as Uint8Array
-    console.log(rawImageData);
-   
-    //from f5stego
-    var stegKey = [1,2,3,4,5,6,7,8,9];
-    var f5get = f5extract(stegKey);
-    var unit8message = f5get(rawImageData);
-    console.log(unit8message);
-    //make into string and display on webpage
-    var strMessage = new TextDecoder().decode(unit8message)
-    document.getElementById("decoderOutput").innerHTML = strMessage;
+      //from f5stego
+      
+      var password = 'notanotherjpeg'; //password from encoder page
+
+      var stegKey = new Uint8Array(password.length); //convert the password string to an array of codepoints
+      for (var i = 0; i < password.length; i++) {
+        stegKey[i] = password.charCodeAt(i);
+      }
+      
+      var f5get = f5extract(stegKey);
+      var unit8message = f5get(rawImageData);
+      
+      //make into string and display on webpage
+      var strMessage = new TextDecoder().decode(unit8message)
+      document.getElementById("decoderOutput").innerHTML = strMessage;
+    };
+
+    req.send(null); // and then we send the request!
 
   </script>
-
-
-
-  
-
-
   </div>
   <div class = "item">
   </div>
 
-  <!-- Row 2 -->
+
+<!-- Row 2 -->
   <div class = "fullwidthitem">
+    <div class = "c1 hideContent">
+    <p>testing</p>
+    </div>
+  </div>
+
+  <!-- Row 3 -->
+  <div class = "fullwidthitem">
+    <div class = "c2 hideContent">
+    <img src="https://cloudflare-ipfs.com/ipfs/QmZQ6D89qxQzT13pGGSFFNzg3Uia5bzaZdALafZLtJzbbo" alt="image stored on IPFS" width = 100%>
+    </div>
+  </div>
+
+    <!-- Row 2 -->
+  <div class = "fullwidthitem">
+    <span class="subheader c1" onclick="switchVisible(this)"><a>Decoded Text</a></span> //
+    <span class="subheader c2" onclick="switchVisible(this)"><a>Original Image</a></span>
   </div>
 
 
-   <!-- Row 6 -->
-  <div class = "fullwidthitem">
   <script>
+function switchVisible(el) {
+  var classN = el.classList.value.split(' ')[1];
+  if(classN == 'c1'){
+    document.querySelector('.workgrid .c1').classList.toggle('hideContent');
+  }
+  else if(classN == 'c2'){
+    document.querySelector('.workgrid .c2').classList.toggle('hideContent');
+  }
+  var arrayOfElements = document.querySelectorAll('.menugrid div').forEach(function(div,i){
+    if(!div.classList.value.includes(classN) && !div.classList.value.includes('hideContent')){
+      div.classList.toggle('hideContent');
+    }
+  });
+}
+</script>
+
+
+   <!-- Row 4 -->
+  <div class = "fullwidthitem">
+    <h4><a href="../../index.html">Menu</a></h4>
+  <!-- <script>
     document.write('<h4><a href="' + document.referrer + '">Menu</a></h4>');
-  </script>
+  </script> -->
   <br>
   </div>
   
@@ -89,5 +128,6 @@
 
 </body>
 </html>
+
 
 
