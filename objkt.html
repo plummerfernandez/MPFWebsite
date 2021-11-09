@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+  <head>
+    <title>Algopop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../../main.css">
+    <script src="./dist/walletbeacon.min.js"></script>
+  </head>
+
+<body>
+  
+
+
+<script type="text/javascript">
+  
+
+import { DAppClient } from "@airgap/beacon-sdk";
+
+const dAppClient = new DAppClient({ name: "Beacon Docs" });
+
+try {
+  console.log("Requesting permissions...");
+  const permissions = await dAppClient.requestPermissions();
+  console.log("Got permissions:", permissions.address);
+} catch (error) {
+  console.log("Got error:", error);
+}
+  
+</script>
+
+
+
+<div class="workgrid">
+   <!-- Row 0 -->
+  <div class = "fullwidthitem">
+  <br>
+  <h4><a href="../../index.html">M Plummer-Fernández</a></h4>
+  </div>
+   <!-- Row 1 -->
+  <div class = "twothirdsitem">
+  <h1><i>Cave Painting Archive</i></h1>
+  <h5>2021-Ongoing<br>
+    Hi-res download centre</h5>
+      <br>
+    <br>
+  </div>
+  <div class = "item">
+  </div>
+  <!-- Row 2 -->
+  <div class = "item">
+    <img src="/works/algopop/algopop-1--plummer-fernandez.jpg" alt="algopop" width = 100%>
+  </div>
+  
+  <div class = "item">
+  </div>
+  <div class = "item">
+  </div>
+<!-- Row 2.5 -->
+  <div class = "twothirdsitem">
+  <p>
+    get your hi-res cave." </p>
+    <br><br>
+  </div>
+  <div class = "item">
+  </div>
+ <!-- Row 3 -->
+  <div class = "item">
+  </div>
+  <div class = "item">
+  </div>
+  <div class = "item">
+    <img src="/works/algopop/algopop-4--plummer-fernandez.jpg" alt="algopop" width = 100%>
+    <br><br><br><br>
+  </div>
+   
+
+
+
+   <!-- Row 6 -->
+  <div class = "fullwidthitem">
+  <script>
+    document.write('<h4><a href="' + document.referrer + '">Menu</a></h4>');
+  </script>
+  <br>
+  </div>
+  
+</div>
+
+
+
+</body>
+</html>
