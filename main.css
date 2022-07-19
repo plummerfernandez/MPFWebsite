@@ -4,8 +4,8 @@ html, body {
   scroll-behavior: smooth;
 }
 body {
-  background-color: #f1f1f1;
-  /*background-color: #ffcccc;*/
+  /*background-color: #f1f1f1;*/
+  background-color: #ffcccc;
   /*background-color:#d4baba;*/
 /*  background-color:white;
 */  text-align: left;
